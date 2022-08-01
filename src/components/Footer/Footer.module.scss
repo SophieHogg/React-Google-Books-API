@@ -1,0 +1,30 @@
+@use "./../../assets/partials/palette";
+@use "./../../assets/partials/devices";
+
+.Footer {
+    background-color: palette.$secondary-colour;
+    color: palette.$neutral-colour;
+    display: flex;
+    justify-content: space-around;
+    height: 7vh;
+    @include devices.phone {
+        font-size: 15px;
+    }
+    @include devices.phone-s {
+        font-size: 12px;
+    }
+    &__LinkDiv {
+        width: 15em;
+        text-align: center;
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background-color: palette.$primary-colour;
+        }
+        &:active {
+            background-color: palette.$darkest-colour;
+        }
+    }
+}

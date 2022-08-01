@@ -1,0 +1,62 @@
+@use "./../../assets/partials/palette";
+@use "./../../assets/partials/devices";
+
+.BooksContainer {
+    background-color: palette.$neutral-colour-dark;
+    padding: 10px;
+    min-height: 60vh;
+    &__SearchBar {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        &__Input {
+            height: 1.7em;
+            width: 40vw;
+            @include devices.large-width {
+                font-size: 17px;
+            }
+        }
+        &__SubmitBtn {
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: palette.$button-colour;
+            color: palette.$neutral-colour;
+            @include devices.large-width {
+                padding: 10px 20px;
+            }
+            &:hover {
+                background-color: palette.$button-hover-colour;
+            }
+            &:active {
+                background-color: palette.$button-click-colour;
+            }
+        }
+    }
+    &__BookCollection {
+        display: flex;
+        justify-content: center;
+        &__Grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 95vw;
+            @include devices.laptop {
+                width: 80vw;
+                gap: 20px;
+            }
+            @include devices.desktop {
+                width: 80vw;
+                gap: 30px;
+            }
+            @include devices.phone {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include devices.phone-s {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}

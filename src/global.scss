@@ -1,0 +1,8 @@
+@use "./assets/partials/palette";
+a {
+    color: palette.$neutral-colour;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}

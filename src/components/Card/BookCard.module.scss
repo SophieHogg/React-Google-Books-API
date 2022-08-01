@@ -1,0 +1,79 @@
+@use "./../../assets/partials/palette";
+@use "./../../assets/partials/devices";
+
+.BookCard {
+    display: flex;
+    flex-direction: column;
+    background-color: palette.$neutral-colour;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 #00000040;
+    border-radius: 10px;
+    text-align: center;
+    &:hover {
+        background-color: palette.$highlight-colour;
+    }
+    @include devices.small-width {
+    }
+    &__Title {
+        margin: 5px;
+        @include devices.small-width {
+            font-size: 15px;
+        }
+    }
+    &__Subtitle {
+        margin: 5px;
+        @include devices.small-width {
+            font-size: 12px;
+        }
+    }
+    &__Image {
+        display: flex;
+        justify-content: center;
+        &__Image {
+            height: 200px;
+            width: 150px;
+            @include devices.small-width {
+                width: 100px;
+                height: 150px;
+            }
+        }
+    }
+    &__Description {
+        font-size: 10px;
+        @include devices.small-width {
+            font-size: 0px;
+        }
+        @include devices.desktop {
+            font-size: 12px;
+        }
+    }
+    &__Button {
+        display: flex;
+        justify-content: center;
+        &__LinkToMoreInfo {
+            background-color: palette.$button-colour;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            text-align: center;
+            &:hover {
+                background-color: palette.$button-hover-colour;
+            }
+            &:active {
+                background-color: palette.$button-click-colour;
+            }
+            @include devices.tablet {
+                width: 100px;
+                font-size: 12px;
+            }
+            @include devices.phone {
+                width: 80px;
+                font-size: 10px;
+            }
+            @include devices.phone-s {
+                width: 80px;
+                font-size: 8px;
+            }
+        }
+    }
+}

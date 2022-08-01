@@ -1,0 +1,27 @@
+@use "./../../assets/partials/palette";
+@use "./../../assets/partials/devices";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&display=swap");
+
+.Header {
+    background-color: palette.$primary-colour;
+    text-align: center;
+    height: 25vh;
+    padding-top: 10px;
+
+    &__Title {
+        font-family: "Cormorant SC", serif;
+        color: palette.$font-colour;
+        font-size: 40px;
+    }
+    &__Subtitle {
+        font-family: "Cormorant SC", serif;
+        color: palette.$font-colour;
+        font-size: 20px;
+    }
+    &__Logo {
+        width: 50px;
+        @include devices.small-width {
+            width: 40px;
+        }
+    }
+}
