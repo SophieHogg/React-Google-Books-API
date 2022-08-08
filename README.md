@@ -1,6 +1,8 @@
 # Google Books API - React
 
-React project using the Google Books API.
+### React project using the Google Books API.
+
+![alt text](./src/assets/images/GoogleBooksAPIInterface.PNG)
 
 ## MVP
 
