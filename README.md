@@ -1,8 +1,10 @@
 # Google Books API - React
 
-### React project using the Google Books API.
+### A React project using the Google Books API to search for books.
 
 ![alt text](./src/assets/images/GoogleBooksAPIInterface.PNG)
+
+This project was created using React as a part of my time at \_nology. The original MVP was to use vanilla JavaScript, but since I wanted to improve my React skills, I asked to complete this project in React instead.
 
 ## MVP
 
